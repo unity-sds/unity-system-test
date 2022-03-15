@@ -7,7 +7,7 @@ import json
 def step_impl(context:Context):
     raise NotImplementedError(u'a product exists in an S3 bucket')
 
-@given(u'a collection has been created for this filetype')
+@given(u'And a collection has been created for this product')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Given a collection has been created for this filetype')
 
@@ -60,3 +60,49 @@ def step_impl(context):
 @then(u'the file size matches the CNM file size')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Then the file size matches the CNM file size')
+
+# new additions#
+
+@given(u'SounderSIPS data exists at an accessible location')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given SounderSIPS data exists at an accessible location')
+
+
+@given(u'the data are not in a Unity owned bucket')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given the data are not in a Unity owned bucket')
+
+
+@given(u'a collection has been created for this product')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given a collection has been created for this product')
+
+
+@then(u'the product shall be copied to a Unity owned bucket')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Then the product shall be copied to a Unity owned bucket')
+
+
+@then(u'the search result maps to the new file')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Then the search result maps to the new file')
+
+
+@given(u'a registered user')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given a registered user')
+
+
+@given(u'a data product to upload')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given a data product to upload')
+
+
+@when(u'a user uploads the product')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: When a user uploads the product')
+
+
+@then(u'the search result maps to a collection')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Then the search result maps to a collection')
