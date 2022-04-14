@@ -22,3 +22,11 @@ Feature: Ingest (copy and catalog) Data in S3 with the U-DS Catalog
     Then the product should be searchable in the catalog
     And the search result maps to the new file
     And the search result maps to a collection
+
+  Scenario: Ingest a data file from SPS Processing
+    Given data products are in a Unity owned bucket
+    And a metadata sidecar file in a Unity owned bucket
+    When a CNM populated with required files is sent to the Cumulus SNS Topic
+    Then the data are cataloged
+    And the metadata are cataloged
+    And a success response is sent to the SPS Process

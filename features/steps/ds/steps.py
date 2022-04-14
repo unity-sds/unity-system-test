@@ -106,3 +106,33 @@ def step_impl(context):
 @then(u'the search result maps to a collection')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Then the search result maps to a collection')
+
+@given(u'data products are in a Unity owned bucket')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given data products are in a Unity owned bucket')
+
+
+@given(u'a metadata sidecar file in a Unity owned bucket')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given a metadata sidecar file in a Unity owned bucket')
+
+
+@when(u'a CNM populated with required files is sent to the Cumulus SNS Topic')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: When a CNM populated with required files is sent to the Cumulus SNS Topic')
+
+
+@then(u'the data are cataloged')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Then the data are cataloged')
+
+
+@then(u'the metadata are cataloged')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Then the metadata are cataloged')
+
+
+@then(u'a success response is sent to the SPS Process')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Then a success response is sent to the SPS Process')
+
