@@ -9,7 +9,21 @@ Feature: Science Processing Service
 
   Scenario: Undeploy an Algorithm deployment
 
+  Scenario: List deployed WPS Processes
+    Given the SoundsSIPS L1A algorithm has been deployed to the ADES
+    And the SoundsSIPS L1B algorithm has been deployed to the ADES
+    When GetCapabilities is called on the WPS-T endpoint
+    Then the WPS-T response is an http-200 Status
+    And the response includes process summary elements
+    And the process summary included the L1A and L1B processors
+
   Scenario: Get the inputs for a given Algorithm deployment
+    Given the SoundsSIPS L1A algorithm has been deployed to the ADES
+    When DescribeProcess is called on the WPS-T endpoint for the L1A Algorithm
+    Then the WPS-T endpoint responds with a ProcessOfferings response
+    And the response page returns a HTTP 200
+    And the response page includes the one or more input element
+    # more to add here?
 
   Scenario: Request L1A Processing from an Algorithm deployment
     Given the SoundsSIPS L1A algorithm has been deployed to the ADES
@@ -24,12 +38,12 @@ Feature: Science Processing Service
     And SounderSIPS L1A data exists in the Unity system
     When a WPS-T request is made to execute the job and the defined L1A Data
     Then a WPS-T response includes a 302
-    And the response redirects users to a job status page
-    And the job status page returns a HTTP 200
-    And the job status processing status is one of "PENDING", "IN PROGRESS", or "COMPLETE"
+    And the response redirects users to an OGC StatusInfo page
+    And the response page returns a HTTP 200
+    And the OGC StatusInfo processing status is one of "Succeeded", "Failed", "Accepted", or "Running"
 
   Scenario: Get the result of a process request
     Given a job processing id for L0 to L1A processing Request
     When a user queries the WPS-T for the given job Id
     Then the job status page returns a HTTP 200
-    And the job status processing status is one of "PENDING", "IN PROGRESS", or "COMPLETE"
+    And the OGC StatusInfo processing status is one of "Succeeded", "Failed", "Accepted", or "Running"
