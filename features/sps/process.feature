@@ -21,8 +21,8 @@ Feature: Science Processing Service
     Given the SoundsSIPS L1A algorithm has been deployed to the ADES
     When DescribeProcess is called on the WPS-T endpoint for the L1A Algorithm
     Then the WPS-T endpoint responds with a ProcessOfferings response
-    And the response page returns a HTTP 200
-    And the response page includes the one or more input element
+    And the response returns an HTTP 200
+    And the response includes the one or more input element
     # more to add here?
 
   Scenario: Request L1A Processing from an Algorithm deployment
@@ -30,9 +30,9 @@ Feature: Science Processing Service
     And SounderSIPS L0 data exists for a 2 hour block of Data in the Unity system
     When a WPS-T request is made to execute the job and the defined L0 Data
     Then a WPS-T response is a 201
-    And the response include a Location header
-    And the Location header directs users to an OGC StatusInfo page
-    And the OGC StatusInfo page returns a HTTP 200
+    And the response includes a Location header
+    And the Location header directs users to an OGC StatusInfo document
+    And the OGC StatusInfo document returns a HTTP 200
     And the OGC StatusInfo processing status is one of "Succeeded", "Failed", "Accepted", or "Running"
 
   Scenario: Request L1B Processing from an Algorithm deployment
@@ -40,13 +40,13 @@ Feature: Science Processing Service
     And SounderSIPS L1A data exists in the Unity system
     When a WPS-T request is made to execute the job and the defined L1A Data
     Then a WPS-T response is a 201
-    And the response include a Location header
-    And the Location header directs users to an OGC StatusInfo page
-    And the OGC StatusInfo page returns a HTTP 200
+    And the response includes a Location header
+    And the Location header directs users to an OGC StatusInfo document
+    And the OGC StatusInfo document returns a HTTP 200
     And the OGC StatusInfo processing status is one of "Succeeded", "Failed", "Accepted", or "Running"
 
   Scenario: Get the result of a process request
-    Given a job processing id for L0 to L1A processing Request
+    Given a job processing id for a processing Request
     When a user queries the WPS-T for the given job Id
-    Then the job status page returns a HTTP 200
+    Then the response returns an HTTP 200
     And the OGC StatusInfo processing status is one of "Succeeded", "Failed", "Accepted", or "Running"
