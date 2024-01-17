@@ -16,3 +16,8 @@ then run the tests
 ```
 behave
 ```
+
+run Shared Service Tests:
+```
+behave --tags=shared
+```
