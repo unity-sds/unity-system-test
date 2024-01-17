@@ -1,0 +1,2 @@
+Feature: The workflow catalog shall be available 99.9% of the time or greater. Due to dependencies on the component,
+  the availability requirement for the shared service is greater than the other specified (99%) requirements.

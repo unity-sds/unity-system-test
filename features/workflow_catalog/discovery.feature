@@ -1,0 +1,2 @@
+Feature: The workflow catalog shall allow discovery of workflows e.g. a browsable/filterable way of finding workflows,
+  can't expect users to know of all the published workflows through some other mechanism.
