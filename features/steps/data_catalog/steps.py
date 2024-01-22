@@ -65,7 +65,7 @@ def step_impl(context):
 
 @given(u'SounderSIPS data exists at an accessible location')
 def step_impl(context):
-    copy data from artifact to s3://asdnadjad
+    # copy data from artifact to s3://asdnadjad
     raise NotImplementedError(u'STEP: Given SounderSIPS data exists at an accessible location')
 
 
@@ -101,7 +101,7 @@ def step_impl(context):
 
 @when(u'a user uploads the product')
 def step_impl(context):
-    os.sys_call(generate_downlaod_list... asdadad)
+    # os.sys_call(generate_downlaod_list... asdadad)
     raise NotImplementedError(u'STEP: When a user uploads the product')
 
 
