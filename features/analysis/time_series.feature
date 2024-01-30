@@ -1,4 +1,5 @@
-Feature: MDPS_2_REQ-87 The transformation and analysis system shall provide timeseries calculations on
+Feature: MDPS_2_REQ-87
+  The transformation and analysis system shall provide timeseries calculations on
   transformation requests. Make sure we can request a time series from the DAPA endpoint for the given
   collecitons
 

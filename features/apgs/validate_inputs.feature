@@ -1,4 +1,5 @@
-Feature: MDPS_2_REQ-163	 The APGS shall provide a mechanism to validate APGS inputs prior to build. this feature should
+Feature: MDPS_2_REQ-163
+  The APGS shall provide a mechanism to validate APGS inputs prior to build. this feature should
   allow for the validation of an application package repository (local or remote), checking to see structure and
   necessary build files are created. It should also be able to examine an output directory for required data
   (e.g. output files, stac files)

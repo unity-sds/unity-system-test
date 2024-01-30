@@ -18,3 +18,21 @@ Feature: MDPS_2_REQ-44
     Examples: products
       | foo:bar | success |
       | bar:foo | failed |
+
+  Scenario Outline: Check on the aggregate statistics of a collection with archived products
+    When i query the archive status of <collection>
+    Then i get an archive collection status response
+    And the count field in the archive status response is <status>
+    And the latency field in the archive status response is not empty
+
+    @develop
+    Examples: products
+      | collection  | status |
+      | foo:bar | 20 |
+      | bar:foo | 100 |
+
+    @test
+    Examples: products
+      | collection  | status |
+      | foo:bar | 20 |
+      | bar:foo | 100 |
