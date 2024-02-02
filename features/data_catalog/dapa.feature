@@ -1,6 +1,7 @@
 # Tested Requirements: MDPS_2_REQ-30, MDPS_2_REQ-31, MDPS_2_REQ-33, MDPS_2_REQ-34, MDPS_2_REQ-35, MDPS_2_REQ-37
 
-Feature: The DAPA API is a set of function on the data. for the U-DS service
+Feature: MDPS_2_REQ-34, MDPS_2_REQ-30, MDPS_2_REQ-31, MDPS_2_REQ-35
+  The DAPA API is a set of function on the data. for the U-DS service
   area, this includes the listing of colleciton,s granules, the filtering of
   granules by time, and searching on project provided metadata
 
@@ -49,7 +50,6 @@ Feature: The DAPA API is a set of function on the data. for the U-DS service
     And no granuels listed are outside the range of the temporal extent specified
 
   @shared
-  @MDPS_2_REQ-37
   Scenario: Search on custom, project provided metadata
     Given asdadd
 

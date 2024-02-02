@@ -11,3 +11,5 @@
 Feature: The Managed Service Feature are the tests related to being a managed service within the unity environment. This
    includes uptime, monitoring, alerting, deployment, and more.
  
+# MDPS_2_REQ-159	L3	MDPS managed services shall report health metrics
+# MDPS_2_REQ-196	L3	MDPS managed services shall be capable of alerting users based on health metrics

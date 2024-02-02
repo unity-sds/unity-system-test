@@ -1,8 +1,6 @@
 from behave import *
 from behave.runner import Context
 
-import json
-
 @given('a product exists in an S3 bucket')
 def step_impl(context:Context):
     raise NotImplementedError(u'a product exists in an S3 bucket')

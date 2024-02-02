@@ -7,3 +7,4 @@ attributes in behave's context object for later use.
 def before_all(context):
     # The following creates an api_calls attribute for behave's context object
     context.venue = "test"
+    context.TEST_COLLECTION = "LA LA LA"
