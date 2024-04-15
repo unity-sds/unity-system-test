@@ -14,16 +14,19 @@
 <!-- ☝️ Replace with a single sentence describing the purpose of your repo / proj ☝️ -->
 
 <!-- Header block for project -->
-
+<!--
 [INSERT YOUR BADGES HERE (SEE: https://shields.io)] [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
-<!-- ☝️ Add badges via: https://shields.io e.g. ![](https://img.shields.io/github/your_chosen_action/your_org/your_repo) ☝️ -->
+ ☝️ Add badges via: https://shields.io e.g. ![](https://img.shields.io/github/your_chosen_action/your_org/your_repo) ☝️ -->
 
+<!--
 [INSERT SCREENSHOT OF YOUR SOFTWARE, IF APPLICABLE]
-<!-- ☝️ Screenshot of your software (if applicable) via ![](https://uri-to-your-screenshot) ☝️ -->
+ ☝️ Screenshot of your software (if applicable) via ![](https://uri-to-your-screenshot) ☝️ -->
 
-[INSERT MORE DETAILED DESCRIPTION OF YOUR REPOSITORY HERE]
-<!-- ☝️ Replace with a more detailed description of your repository, including why it was made and whom its intended for.  ☝️ -->
+<!--[INSERT MORE DETAILED DESCRIPTION OF YOUR REPOSITORY HERE]
+ ☝️ Replace with a more detailed description of your repository, including why it was made and whom its intended for.  ☝️ -->
+This repository includes the system test plan to be executed against a release of the Unity software system. This is mainly forr developers and integrators of Unity software. 
 
+<!--
 [INSERT LIST OF IMPORTANT PROJECT / REPO LINKS HERE]
 <!-- example links>
 [Website](INSERT WEBSITE LINK HERE) | [Docs/Wiki](INSERT DOCS/WIKI SITE LINK HERE) | [Discussion Board](INSERT DISCUSSION BOARD LINK HERE) | [Issue Tracker](INSERT ISSUE TRACKER LINK HERE)
@@ -31,9 +34,10 @@
 
 ## Features
 
-* [INSERT LIST OF FEATURES IMPORTANT TO YOUR USERS HERE]
-  
-<!-- ☝️ Replace with a bullet-point list of your features ☝️ -->
+* BDD driven test plans allow to keep test plans in sync with real world deployments.
+* Test plans to address requirements
+* tags to allow for testing of shared services, smoke tests, and destructive tests
+
 
 ## Contents
 
@@ -46,14 +50,15 @@
 
 ## Quick Start
 
-This guide provides a quick way to get started with our project. Please see our [docs]([INSERT LINK TO DOCS SITE / WIKI HERE]) for a more comprehensive overview.
+This guide provides a quick way to get started with our project. Please see our [docs](https://unity-sds.gitbook.io/docs/system-lifecycle/testing) for a more comprehensive overview.
 
 ### Requirements
 
 * Knowledge of Behavior Driven Development (BDD)
 * [Behave framework](https://behave.readthedocs.io/en/stable/)
+* Unity username and password for service based testing
+* AWS access for in-depth testing
   
-<!-- ☝️ Replace with a numbered list of your requirements, including hardware if applicable ☝️ -->
 
 ### Setup Instructions
 
@@ -72,10 +77,6 @@ This guide provides a quick way to get started with our project. Please see our 
   ```
 
 ### Usage Examples
-
-* [INSERT LIST OF COMMON USAGE EXAMPLES HERE, WITH OPTIONAL SCREENSHOTS]
-
-<!-- ☝️ Replace with a list of your usage examples, including screenshots if possible, and link to external documentation for details ☝️ -->
 
 ```
 behave
@@ -99,28 +100,25 @@ behave --tags=shared
 
 ### Build Instructions (if applicable)
 
-1. [INSERT STEP-BY-STEP BUILD INSTRUCTIONS HERE, WITH OPTIONAL SCREENSHOTS]
-
-<!-- ☝️ Replace with a numbered list of your build instructions, including expected results / outputs with optional screenshots ☝️ -->
+No builds are necessary- thes run from source code.
 
 ### Test Instructions (if applicable)
 
-1. [INSERT STEP-BY-STEP TEST INSTRUCTIONS HERE, WITH OPTIONAL SCREENSHOTS]
-
-<!-- ☝️ Replace with a numbered list of your test instructions, including expected results / outputs with optional screenshots ☝️ -->
+1. Test plan is communicated in the feature files of this project.
 
 ## Changelog
 
 See our [CHANGELOG.md](CHANGELOG.md) for a history of our changes.
 
-See our [releases page]([INSERT LINK TO YOUR RELEASES PAGE]) for our key versioned releases.
+See our [releases page](https://github.com/unity-sds/unity-system-test/releases) for our key versioned releases.
 
 <!-- ☝️ Replace with links to your changelog and releases page ☝️ -->
 
 ## Frequently Asked Questions (FAQ)
 
+<!--
 [INSERT LINK TO FAQ PAGE OR PROVIDE FAQ INLINE HERE]
-<!-- example link to FAQ PAGE>
+ example link to FAQ PAGE>
 Questions about our project? Please see our: [FAQ]([INSERT LINK TO FAQ / DISCUSSION BOARD])
 -->
 
@@ -147,7 +145,7 @@ See our: [LICENSE](LICENSE)
 
 ## Support
 
-[INSERT CONTACT INFORMATION OR PROFILE LINKS TO MAINTAINERS AMONG COMMITTER LIST]
+TBD
 
 <!-- example list of contacts>
 Key points of contact are: [@github-user-1](link to github profile) [@github-user-2](link to github profile)
