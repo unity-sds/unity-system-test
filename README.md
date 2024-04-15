@@ -77,6 +77,26 @@ This guide provides a quick way to get started with our project. Please see our 
 
 <!-- ☝️ Replace with a list of your usage examples, including screenshots if possible, and link to external documentation for details ☝️ -->
 
+```
+behave
+```
+
+Run against "develop" values
+```
+behave --tags=@develop features/tagged_examples.feature
+```
+
+Run against "test" values
+```
+behave --tags=@test features/data_catalog/parent_collections.feature
+```
+
+run Shared Service Tests:
+```
+
+behave --tags=shared
+```
+
 ### Build Instructions (if applicable)
 
 1. [INSERT STEP-BY-STEP BUILD INSTRUCTIONS HERE, WITH OPTIONAL SCREENSHOTS]
