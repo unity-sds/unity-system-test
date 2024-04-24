@@ -3,8 +3,9 @@ Feature: MDPS_2_REQ-6
 
   @manual
   Scenario: SPS UI is available to SPS users
+    Given a deployed SPS into a project venue
+    When i navigate a browser to mdps.mcp.nasa.gov/project/venue/processing/ui
+    Then i am presented with the SPS UI
 
-  @manual
-  Scenario: Job status is visible from the SPS UI
 
 
