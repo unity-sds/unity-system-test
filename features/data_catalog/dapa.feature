@@ -51,9 +51,17 @@ Feature: MDPS_2_REQ-34, MDPS_2_REQ-30, MDPS_2_REQ-31, MDPS_2_REQ-35
 
   @shared
   Scenario: Search on custom, project provided metadata
-    Given asdadd
+    Given a DAPA endpoint with a colleciton defined
+    And the caller has set authentication
+    And the collection has one or more products associated with it
+    When a request is made to the DAPA items endpoint for the specified metadata
+    Then the response is a STAC document
+    And the response returns an HTTP 200
+    And the response includes one or more collections
+    And each collection has a collection Identifier
 
-  # For the enar term, we should identify the access method as S3 access
+
+  # For the near term, we should identify the access method as S3 access
   Scenario: Download product via S3
     Given a STAC Response Document specifying collection products with S3 links
     And the caller has set up S3 authentication
