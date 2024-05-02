@@ -13,4 +13,4 @@ Feature: MDPS_2_REQ-59
   Scenario: Access to MDPS Data from the Unity IDE
     Given the bucket or buckets available to the venue environment defined at venue set up
     When i do an aws s3 get on an object in the bucket from the IDE
-    Then I downlaod the data to my IDE environment
+    Then I download the data to my IDE environment
