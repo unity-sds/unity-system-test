@@ -1,13 +1,13 @@
 Feature: MDPS_2_REQ-116
-  MDPS managed services shall provide a common destroy mechanism for the <ARTIFACT>
+  MDPS managed services shall provide a common destroy mechanism for the IDE
 
   @ARTIFACT
   @venue
   Scenario Outline: Management console exists within a given venue for destroying packages
     Given a logged in Unity user
-    And <ARTIFACT> is installed in the venue
-    When I view <ARTIFACT> in the <venue> management console
-    Then I have the option to destroy <ARTIFACT>
+    And IDE is installed in the venue
+    When I view IDE service listed in the <venue> management console
+    Then I have the option to destroy the IDE service
 
     @develop
     Examples: venue
@@ -21,11 +21,11 @@ Feature: MDPS_2_REQ-116
       | unity-venue/test |
 
   @venue
-  Scenario Outline: I can destroy ARTIFACT via the management console
+  Scenario Outline: Destroy IDE via the management console
     Given a logged in Unity user
-    And <ARTIFACT> is installed in the venue
-    When I destroy <ARTIFACT> in the <venue> management console
-    Then the <ARTIFACT> is removed from the management system
+    And IDE is installed in the venue
+    When I destroy IDE in the <venue> management console
+    Then the IDE is removed from the management system
     And the resources are removed from my venue
 
     @develop
