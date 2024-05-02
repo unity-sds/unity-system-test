@@ -1,14 +1,16 @@
 Feature: MDPS_2_REQ-158
-  MDPS managed services shall allow resource customization	
+  MDPS managed services (IDE) shall allow resource customization	(storage, memory, and CPU utilization)
 
   @venue
-  Scenario Outline: Management console exists within a given venue for resource customization
+  Scenario Outline:  IDE storage customization 
     Given a logged in Unity users
     When I access the management console in <venue> venue
-    Then I can list various resources to customize for my environment
-    And I can modify these resource constraints based on my needs
+    Then I can select the <resource> for my IDE environment
+    And I can define the maximum <resource> threshold 
 
     @develop
-    Examples: venue
-      | venue  |
-      | unity-venue/dev |
+    Examples: venue and resource customization
+      | venue           | resource      | 
+      | unity-venue/dev | storage       |
+      | unity-venue/dev | memory        |
+      | unity-venue/dev | CPU           |
