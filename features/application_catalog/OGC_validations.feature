@@ -1,5 +1,5 @@
 Feature: MDPS_2_REQ-70
-  Ability to publish an application pacakge to Application Catalog
+  The application catalog shall provide the capability to publish application packages conforming to the published OGC Best Practice for Earth Observation Application Package
 
   Scenario: Successful Publication of an OGC Application Package
     Given I am an authorized user to the application catalog
