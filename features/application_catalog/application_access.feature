@@ -1,11 +1,11 @@
-Feature: MDPS_2_REQ-67
-  The ability to access CWL files from the application catalog
+Feature: MDPS_2_REQ-67 and MPDS_2_REQ-70
+  The application catalog shall allow access to application packages from the centralized catalog
 
   @application-catalog
   @shared
   Scenario Outline: Successful Application Catalog Access
     When I access <app-package> from the Application Catalog as an non-logged in user
-    Then the applicaiton catalog access request is successful
+    Then the application catalog access request is successful
 
 #    @develop
 #    Examples: packages
