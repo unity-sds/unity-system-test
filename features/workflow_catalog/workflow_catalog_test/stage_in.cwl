@@ -25,8 +25,8 @@ outputs:
       glob: .
     type: Directory
 requirements:
-  DockerRequirement:
-    dockerPull: ghcr.io/unity-sds/unity-data-services:5.3.1
+#  DockerRequirement:
+#    dockerPull: ghcr.io/unity-sds/unity-data-services:5.3.1
   EnvVarRequirement:
     envDef:
       DOWNLOAD_DIR: $(runtime.outdir)
