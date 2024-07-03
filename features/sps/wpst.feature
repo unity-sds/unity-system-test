@@ -41,7 +41,24 @@ Feature: MDPS_2_REQ-2, MDPS_2_REQ-177
       | sounder_sips |  L1B             |
       | sounder_sips |  chirp |
 
-  Scenario Outline: WPS-T Execute and Status After requesting execution of a process, a job status request is made
+  Scenario Outline: WPS-T Execute
+      Given the <project_name> <process_name> algorithm process has been deployed to the ADES
+      When a WPS-T request is made to execute the process
+      And the WPS-T request includes the correct inputs
+      Then the HTTP response contains a status code of 201
+      And the response includes a Location header
+      And the Location header contains a job ID
+
+
+      Examples:
+      | project_name | process_name     |
+      | sounder_sips |  L1A             |
+      | sounder_sips |  L1B             |
+      | sounder_sips |  chirp |
+
+  Scenario: WPS-T DescribeProcess
+
+  Scenario Outline: WPS-T Status
       Given the <project_name> <process_name> algorithm process has been deployed to the ADES
       And a WPS-T request is made to execute the process
       And the HTTP response contains a status code of 201
@@ -58,11 +75,11 @@ Feature: MDPS_2_REQ-2, MDPS_2_REQ-177
       | sounder_sips |  L1B             |
       | sounder_sips |  chirp |
 
-  Scenario: WPS-T DescribeProcess
 
-  Scenario: WPS-T Execute and DismissProcess
+  Scenario: WPS-T  DismissProcess
     Given a sample deployed application package
     And the sample deployed process is executed
-    When the sample process execution is dismissed
+    And the execution ID is know
+    When the sample process execution is dismissed by id
     Then the sample process execution is stopped
     And the sample process execution status is 'aborted'
