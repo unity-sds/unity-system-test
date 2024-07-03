@@ -37,6 +37,7 @@ Feature: MDPS_2_REQ-34, MDPS_2_REQ-30, MDPS_2_REQ-31, MDPS_2_REQ-35
   # Access {root}/collections/{collectionId}/items?datetime=BeginningDate/EndingDate
   @shared
   @MDPS_2_REQ-34
+  @MDPS_2_REQ-35
   Scenario: Filter products by Collection and Time
     Given a DAPA endpoint with a colleciton defined
     And the collection has one or more products associated with it
@@ -50,13 +51,22 @@ Feature: MDPS_2_REQ-34, MDPS_2_REQ-30, MDPS_2_REQ-31, MDPS_2_REQ-35
     And no granuels listed are outside the range of the temporal extent specified
 
   @shared
+  @MDPS_2_REQ-35
   Scenario: Search on custom, project provided metadata
-    Given asdadd
+    Given a DAPA endpoint with a colleciton defined
+    And the caller has set authentication
+    And the collection has one or more products associated with it
+    When a request is made to the DAPA items endpoint for the specified metadata
+    Then the response is a STAC document
+    And the response returns an HTTP 200
+    And the response includes one or more collections
+    And each collection has a collection Identifier
 
-  # For the enar term, we should identify the access method as S3 access
+
+  # For the near term, we should identify the access method as S3 access
   Scenario: Download product via S3
     Given a STAC Response Document specifying collection products with S3 links
     And the caller has set up S3 authentication
     When a user attempts to access a product data access link
     Then the response returns an HTTP 200
-    And the object requested is succssfully downloaded
+    And the object requested is successfully downloaded

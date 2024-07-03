@@ -1,0 +1,34 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "unity-sds.SBG-unity-resample.2d8be85d",
+            "title": "Updated to run algorithm.\n",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/jplzhan/artifact-deposit-repo/main/SBG-unity-resample/workflow.cwl"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": [
+                "Demo"
+            ],
+            "inputs": [],
+            "outputs": []
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [
+        {
+            "href": "docker://leebrian0731/sbg-unity-resample:2d8be85d"
+        }
+    ]
+}
