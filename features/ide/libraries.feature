@@ -4,7 +4,13 @@ Feature: MDPS_2_REQ-76
   @ide
   @venue
   @manual
+  Scenario: Ability to share project required libraries within the IDE
+    Given a shared folder within the IDE
+    When I write code samples within the shared location
+    Then it is accessible by other users within the same IDE (venue)
+
+
   Scenario: Ability to define project required libraries within the IDE
-  # Given a shared data location within the IDE
-  # When i write data or code samples to the shared data location
-  # Then it is accessible by other users within the same IDE (venue)
+    Given a shared folder within the IDE
+    When I define project required libraries within my sample code
+    Then it is accessible within the same IDE (venue)
